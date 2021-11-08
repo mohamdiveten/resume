@@ -41,7 +41,7 @@
   \noindent
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \centerline{
-      \textbf{\href{#1}{\color{black}{\LARGE {\underline{#2}}}}}
+      \textbf{\href{#1}{\color{black}{\textbf {\underline{#2}}}}}
     }
     \vspace{5pt}\\
     \centerline{
@@ -113,51 +113,10 @@
   {LinkedIn}
   {https://www.linkedin.com/in/mohamdi-veten}
 
-%   SUMMARY   %
-\section{Summary}
-\sectionStart
-  \summaryText
-  {Software Engineer with years of experience in back-end development }
-\sectionEnd
-
-%   EDUCATION   %
-\section{Education}
-\sectionStart
-  
-    
-    \educationItem
-    {M.Sc} 
-    {Electronics and Computer Engineering} 
-    {2016}
-    {Istanbul Sehir University} 
-    {3.8/4.0}
-    
-    \educationItem
-    {B.Sc} 
-    {Computer Science} 
-    {2013}
-    {University of Jordan} 
-    {3.8/4.0}
-\sectionEnd
 
 
-%   SKILLS   %
-\section{Technical Skills}
-\sectionStart
-  \skillItem
-    {Languages}
-    {C\# (.NET), Python}
-  \skillItem
-    {Frameworks}
-    {.NET, AngularJS}
-  \skillItem
-    {Tools}
-    {Azure}
-     \skillItem
-    {Spoken Languages}
-    {Arabic (Native), English(Full Proficiency), French \& Turkish ( Working Proficiency))}
-  \vspace{3pt}
-\sectionEnd
+ \input{includes/summary-section} %/
+
   
 %   EXPERIENCE   %
 \section{Experience}
@@ -169,32 +128,55 @@
   \listStart
   \bulletItem
   {
-Collaborated with 3 developers to develop a system using \textbf{(ASP.NET/EF/MSSQL)} that:
+Led the requirements analysis and development of an internal 
+ERP using (ASP.NET/EF/MSSQL) that:
 \begin{itemize}
-\item  Increased the productivity of events organizers by automating clients registration, follow-up, and awarding.
-\item Reduced the workload of HR by self-servicing time-off requests and attendance reporting.
+\item  Increased the productivity of events organizers by automating participants registration, follow-up, and awarding.
+\item Reduced the workload of HR by self-servicing Staff time-off requests and attendance reporting.
+\item Went in production shortly and maintained stakeholders engagement via frequent, value-based delivery.  
 \item Saved 70\% of the expense of off-the-shelf solution.
-\item Concluded weeks earlier than scheduled by engaging stakeholders and negotiating non-value-add requirements.  
 \end{itemize}
+
+
 
   }
     \bulletItem
-    {Refactored a large monolithic \textbf{PHP} system to loosely coupled polyglot  \textbf{(.NET \& Python)} services employing common design patterns that intercommunicate via API's.}
+    {Refactored a large monolithic PHP system to loosely coupled polyglot (.NET \& Python) services that intercommunicate via REST API's.}
+     
     \bulletItem
-    {Developed sizable collection of PowerShell \& Python scripts to automate backup, Test/Dev setup, deployment and other administrative tasks}
+    {Developed sizable collection of PowerShell \& Python scripts to automate backup, Test/Dev setup, deployment and other administrative tasks.}
     \bulletItem
-    {Initiated and successfully implemented number of impactful initiatives such as:  
+    {Initiated and successfully implemented key transformative initiatives such as:  
     \begin{itemize}
-    \item Migrating codebases to \textbf{Azure DevOps} and configuring time-saving release/development pipelines.
-    \item Upskilling and reskilling colleagues on agile methodologies and trending tools and practices.
+    \bulletItem {Rolling out a data-driven task management and reporting system using SharePoint, PowerBI and Power Automate that helped with increasing productivity and reducing repetitive status reporting.  }
+    \item Migrating codebases to Azure DevOps and configuring time-saving release/development pipelines.
+    \item Upskilling and reskilling colleagues on agile methodologies and trending programming tools and practices.
     \item Fostering a culture of experimentation, open communication and focus on frequent delivery of value. 
+    
     \end{itemize}
         
     }
+    
+    \bulletItem
+    {
+		Written Python ETLs to extract socioeconomic data from API's leading to: 
+		\begin{itemize}
+		
+		\item Increased timeliness of published data by shortening the update cycle from 12 to 4 weeks.
+		\item Increased speed \& quality of research by highlighting relevant metrics and data inconsistencies.
+\end{itemize}		    
+    }
+   
     \bulletItem
     {Work closely with the Director overseeing the departmental affairs and serve as  deputy in his absence. }
+    
+    
+    
   \listEnd
 \sectionEnd
+
+
+\input{includes/education-section}
 
 %   LEADERSHIP   %
 \section{Certifications}
@@ -205,5 +187,8 @@ Collaborated with 3 developers to develop a system using \textbf{(ASP.NET/EF/MSS
 	\item \href{https://www.credly.com/badges/209afd56-075a-42e3-9ce8-88c8bc05aae5/public_url}{Microsoft Certified: Azure Data Scientist Associate}
 	\item \href{https://www.credly.com/badges/1d886867-8f7b-45d5-b2ee-5416127e3d36/public_url}{Microsoft Certified: Azure Fundamentals}
 \end{itemize}
+
+\input{includes/techskills-section}
+
 
 \end{document}
