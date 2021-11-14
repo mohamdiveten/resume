@@ -1,0 +1,182 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{scrextend}
+
+%\usepackage{showframe} % debugging use only
+
+\geometry{
+  letterpaper,
+  left = 0.5in,
+  right = 0.5in,
+  top = 0.6in,
+  bottom = 0.6in
+}
+
+\hypersetup{
+  colorlinks = true, 
+  linkcolor = blue, 
+  urlcolor  = blue,
+  citecolor = blue, 
+  anchorcolor = blue
+}
+
+%   CUSTOM STYLES  %
+\thispagestyle{empty} % remove page number
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+%   MACROS  %
+\newcommand{\sectionStart}{
+  \begin{itemize}[label={},leftmargin=0in]
+}
+\newcommand{\sectionEnd}{
+  \end{itemize}
+}
+\newcommand{\head}[9]{
+  \noindent
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \centerline{
+      \textbf{\href{#1}{\color{black}{\LARGE {\underline{#2}}}}}
+    }
+    \vspace{5pt}\\
+    \centerline{
+      \href{mailto:#3}{\underline{#3}} $\mid$
+      #4 $\mid$
+      #5 : \href{#6}{\underline{#7}} $\mid$
+      #8 : \href{#9}{\underline{#7}}
+    }
+  \end{tabular*}
+  \vspace{-10pt}
+}
+\newcommand{\summaryText}[1]{
+  \item
+  \begin{addmargin}[7pt]{0pt}
+    {#1}
+  \end{addmargin}
+}
+\newcommand{\educationItem}[5]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    {#1 in \textbf{#2}}  & {#3}\\
+    {\textit{#4}} & {#5}\\\vspace{-18pt}
+  \end{tabular*}
+  \vspace{-5pt}
+}
+\newcommand{\skillItem}[2]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{}l@{}}
+    {\textbf{#1}: } & {#2}
+  \end{tabular*}\vspace{-17pt}
+}
+\newcommand{\jobHeading}[3]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    \normalsize{\textbf{#1}} & #2 \\
+    \textit{\small#3} \\
+  \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\projectHeading}[4]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    \normalsize{{\href{#1}{#2}} \textbf{#3}} & #4 \\
+  \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\listStart}{\begin{itemize}}
+\newcommand{\listEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\bulletItem}[1]{
+  \item
+  \small{
+    {#1 \vspace{-1.8pt}}
+  }
+}
+
+\begin{document}
+
+%   HERO   %
+\head
+  {}
+  {Mohamdi Veten}
+  {mohamdiveten@gmail.com}
+  {+90 533 240 05 22}
+  {Github}
+  {https://github.com/mohamdiveten}
+  {mohamdiveten}
+  {LinkedIn}
+  {https://www.linkedin.com/in/mohamdi-veten}
+
+\input{summary}
+
+%   EXPERIENCE   %
+\section{Experience}
+\sectionStart
+  \jobHeading
+    {IT Officer}
+    {May 2016 - Present}
+    {SESRIC (OIC Ankara Centre), Turkey}
+  \listStart
+  
+  \bulletItem{
+Self initiated and led the migration of  IT and data estate to the cloud (Azure and Office 365), first of its kind among the Centre's subsidiary peers.
+
+ \bulletItem
+    {Led and successfully implemented additional key transformative initiatives such as:  
+    \begin{itemize}
+    \item Rolling out a data-driven task management and reporting system using SharePoint, PowerBI and Power Automate that helped with increasing productivity and reducing repetitive status reporting.
+    \item Migrating codebases to Azure DevOps and configuring time-saving release/development pipelines.
+    \item Upskilling and reskilling colleagues on agile methodologies and trending tools and practices.
+    \item Fostering a culture of experimentation, open communication, and focus on frequent delivery of value. 
+    \end{itemize}
+        
+    }
+    
+  
+  }
+  
+   \bulletItem
+    {Developed sizable collection of PowerShell \& Python scripts to automate backup, Test/Dev setup, deployment and other administrative tasks.}
+   
+  \bulletItem
+  {
+Collaborated with 3 developers to develop a system using (ASP.NET/EF/MSSQL) that:
+\begin{itemize}
+\item  Increased the productivity of events organizers by automating clients registration, follow-up, and awarding.
+\item Reduced the workload of HR by self-servicing time-off requests and attendance reporting.
+\item Saved 70\% of the expense of off-the-shelf solution.
+\item Concluded weeks earlier than scheduled by engaging stakeholders and negotiating non-value-add requirements.  
+\end{itemize}
+
+  }
+ 
+ \bulletItem
+ {
+ Organized training series to staff on Microsoft Project, SharePoint, and Office 365 which fostered inter-departmental collaboration and helped put realizable estimates.
+ }
+  
+    \bulletItem
+    {Work closely with the Director overseeing the departmental affairs and serve as  deputy in his absence. }
+  \listEnd
+  
+  
+  
+\sectionEnd
+
+\input{../includes/certifications}
+
+
+\input{../includes/education}
+
+
+\input{skills}
+  
+  
+ 
+\end{document}
